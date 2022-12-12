@@ -33,7 +33,9 @@
 .arrow{
     position: absolute;
     width: 40px;
-    background-color: rgba(174, 174, 174, 0.509);
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.509);
+    border: 0.1rem solid #000;
     border-radius: 50px;
     font-weight: 800; 
     left: 50%;
@@ -52,7 +54,7 @@
 }
 
 .prev:hover, .next:hover{
-    background-color: rgba(174, 174, 174, 1);   
+    background-color: rgb(255, 255, 255);   
 }
 
 .item.active{
@@ -77,4 +79,25 @@
 
 .circle.active, .circle:hover{
     background-color: rgba(174, 174, 174, 1); 
+}
+
+.comandi-autoplay {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.button {
+    background-color: #fff;
+    border: 0.1rem solid #000;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+
+button:hover, button:focus {
+    background: #000;
+    color: #fff;
 }

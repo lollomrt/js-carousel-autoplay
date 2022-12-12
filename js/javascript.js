@@ -84,6 +84,15 @@ prev.addEventListener('click', function(){
 // Inizio autoplay
 let myAutoplay = setInterval(autoplay, 2000)
 
+document.getElementById("attiva").addEventListener("click", function(){
+    myAutoplay = setInterval(autoplay, 2000)
+    console.log(myAutoplay)
+})
+
+document.getElementById("disattiva").addEventListener("click", function(){
+    clearInterval(myAutoplay)
+})
+
 function autoplay() {
     //verifico l'elemento attivo (itemActive)
     let lastItemActive = items[itemActive]
@@ -106,8 +115,6 @@ function autoplay() {
     lastCircleActive.classList.remove("active")
 }
 
-// function stopInterval {
-//     clearInterval(myAutoplay)
-// }
+
 
 
