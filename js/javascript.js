@@ -80,3 +80,34 @@ prev.addEventListener('click', function(){
     activeCircle.classList.add("active")
     lastCircleActive.classList.remove("active")
 })
+
+// Inizio autoplay
+let myAutoplay = setInterval(autoplay, 2000)
+
+function autoplay() {
+    //verifico l'elemento attivo (itemActive)
+    let lastItemActive = items[itemActive]
+    let lastCircleActive = circles[itemActive]
+
+    //incremento il suo valore di 1
+    if (itemActive == items.length - 1){
+        itemActive = 0
+    } else {
+        itemActive = itemActive + 1
+    }
+    
+    //aggiungere la class active al nuovo elemento dell'array items e la vado a rimuovere da quello precedente
+    let activeItem = items[itemActive]
+    let activeCircle = circles[itemActive]
+    activeItem.classList.add("active")
+    lastItemActive.classList.remove("active")
+    //stessa cosa per i cerchi
+    activeCircle.classList.add("active")
+    lastCircleActive.classList.remove("active")
+}
+
+function stopInterval {
+    clearInterval(myAutoplay)
+}
+
+
