@@ -106,8 +106,8 @@ function autoplay() {
     lastCircleActive.classList.remove("active")
 }
 
-function stopInterval {
-    clearInterval(myAutoplay)
-}
+// function stopInterval {
+//     clearInterval(myAutoplay)
+// }
 
 
